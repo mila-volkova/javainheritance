@@ -22,7 +22,9 @@ public class Meeting extends Task {
 
     public String getstart() {
         return start;
-    }    @Override
+    }
+
+    @Override
     public boolean matches(String query) {
         if (topic.contains(query)) {
             return true;

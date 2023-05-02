@@ -32,20 +32,23 @@ public class TaskTest {
                 "Выкатка 3й версии приложения",
                 "Приложение НетоБанка",
                 "Во вторник после обеда");
-        
+
         boolean actual = task.matches("обработка");
         Assertions.assertFalse(actual);
     }
+
     @Test
-   public void testMatchesForSimpleTaskWhenTrue2() {
+    public void testMatchesForSimpleTaskWhenTrue2() {
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
-    Epic subtask = new Epic(55, subtasks);
-    boolean actual = subtask.matches("Молоко");
-    boolean expected = true;
-    Assertions.assertTrue(actual);
+        Epic subtask = new Epic(55, subtasks);
+        boolean actual = subtask.matches("Молоко");
+        boolean expected = true;
+        Assertions.assertTrue(actual);
 
 
-} @Test
+    }
+
+    @Test
     public void testMatchesForSimpleTaskWhenFalse2() {
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic subtask = new Epic(55, subtasks);
